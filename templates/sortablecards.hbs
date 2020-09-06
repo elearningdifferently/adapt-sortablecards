@@ -1,3 +1,39 @@
+<style>
+#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+#draggable, #draggable-nonvalid { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+</style>
+
+<script>
+$( function() {
+  $( "#draggable" ).draggable({ revert: "valid" });
+  $( "#draggable2" ).draggable({ revert: "invalid" });
+
+  $( "#droppable" ).droppable({
+    classes: {
+      "ui-droppable-active": "ui-state-active",
+      "ui-droppable-hover": "ui-state-hover"
+    },
+    drop: function( event, ui ) {
+      $( this )
+        .addClass( "ui-state-highlight" )
+        .find( "p" )
+          .html( "Dropped!" );
+    }
+  });
+} );
+</script>
+
+
 <div class="component__inner sortablecards__inner">
-  HELLOW WORLD {{> component this}}
+  <div id="draggable-nonvalid" class="ui-widget-content">
+  <p>I'm draggable but can't be dropped</p>
+  </div>
+
+  <div id="draggable" class="ui-widget-content">
+  <p>Drag me to my target</p>
+  </div>
+
+  <div id="droppable" class="ui-widget-header">
+  <p>accept: '#draggable'</p>
+  </div>
 </div>
