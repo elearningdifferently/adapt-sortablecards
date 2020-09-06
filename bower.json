@@ -1,0 +1,16 @@
+{
+  "name": "adapt-sortablecards",
+  "version": "4.1.0",
+  "framework": ">=5.5",
+  "homepage": "https://github.com/elearningdifferently/adapt-sortablecards",
+  "issues": "https://github.com/elearningdifferently/adapt_framework/issues/new",
+  "component" : "sortablecards",
+  "displayName" : "sortablecards",
+  "description": "A component to display cards sortable by buckets",
+  "main": "/js/adapt-sortablecards.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}
