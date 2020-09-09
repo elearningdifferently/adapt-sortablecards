@@ -2,7 +2,6 @@ define([
   'core/js/adapt',
   'core/js/views/componentView',
   'core/js/models/componentModel',
-  'libraries/jquery-1-12-4',
   'libraries/jquery-ui'
 ], function(Adapt, ComponentView, ComponentModel) {
 
